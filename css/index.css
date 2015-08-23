@@ -150,8 +150,8 @@ img {
     20%  {opacity:1; transform: scale(1);}
     40%  {opacity:1; transform: scale(0.8);}
     60%  {opacity:1; transform: scale(1);}
-    80% {opacity:1; transform: scale(0.9);}
-    100% {opacity:1; transform: none;}
+    80%  {opacity:1; transform: scale(0.9);}
+    100% {opacity:1; transform: scale(1);}
 }
 
 @-webkit-keyframes jump {
@@ -160,7 +160,7 @@ img {
     40%  {opacity:1; -webkit-transform: scale(0.8);}
     60%  {opacity:1; -webkit-transform: scale(1);}
     80%  {opacity:1; -webkit-transform: scale(0.9);}
-    100% {opacity:1; -webkit-transform: none;}
+    100% {opacity:1; -webkit-transform: scale(1);}
 }
 
 
@@ -282,7 +282,7 @@ div.line {
     5%  {transform: rotate(-15deg);}
     10%  {transform: rotate(10deg);}
     15%  {transform: rotate(-7deg);}
-    20% 100% {transform: none;}
+    20%, 100% {transform: none;}
 }
 
 @-webkit-keyframes rotate {
@@ -290,7 +290,7 @@ div.line {
     5%  {-webkit-transform: rotate(-15deg);}
     10%  {-webkit-transform: rotate(10deg);}
     15%  {-webkit-transform: rotate(-7deg);}
-    20% 100% {-webkit-transform: none;}
+    20%, 100% {-webkit-transform: none;}
 }
 
 .arrow {
@@ -359,7 +359,7 @@ div.line {
 
 @-webkit-keyframes injured {
     0%   {-webkit-transform:translate3d(200%,0,0)}
-    100% {-webkit-transform:none;transform:none;opacity:1}
+    100% {-webkit-transform:translate3d(0, 0, 0);opacity:1}
 }
 
 .cur .ambulance {
@@ -382,6 +382,7 @@ div.line {
 
 .cur .first {
     opacity: 1;
+    animation: jump 1s ease-in-out both;
     -webkit-animation: jump 1s ease-in-out both;
 }
 
@@ -395,8 +396,8 @@ div.line {
 
 .cur .teacher {
     opacity: 1;
-    animation: updown 1s ease 1s both;
-    -webkit-animation: updown 1s ease 1s both;
+    animation: updown 1s ease 2s both;
+    -webkit-animation: updown 1s ease 2s both;
 }
 
 @keyframes updown {
@@ -405,16 +406,16 @@ div.line {
     40%  {transform: translate3d(0, -15px, 0);}
     60%  {transform: translate3d(0, 0, 0)}
     80%  {transform: translate3d(0, -5px, 0);}
-    100% {transform: none}
+    100% {transform: translate3d(0, 0, 0)}
 }
 
-@-webkit-frames updown {
+@-webkit-keyframes updown {
     0%   {-webkit-transform: translate3d(0, -600px, 0);}
     20%  {-webkit-transform: translate3d(0, 5px, 0);}
     40%  {-webkit-transform: translate3d(0, -15px, 0);}
     60%  {-webkit-transform: translate3d(0, 0, 0)}
     80%  {-webkit-transform: translate3d(0, -5px, 0);}
-    100% {-webkit-transform: none}
+    100% {-webkit-transform: translate3d(0, 0, 0)}
 }
 
 .cur .words-rain span:nth-child(1) {
