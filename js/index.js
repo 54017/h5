@@ -1,15 +1,20 @@
 $(function() {
-	$('.wp-inner').fullpage({
-		afterChange: function() {
-			if ($.fn.fullpage.getCurIndex() == 0) {
-				$.fn.fullpage.stop();
-			}
-		}
-	});
+	var mySwiper = new Swiper ('.swiper-container', {
+      // Optional parameters
+      direction: 'vertical'
+    })
 
-	$('.start-bt, start-img').tap(function() {
-		$.fn.fullpage.moveNext();
-		$.fn.fullpage.start()
-	})
+    mySwiper.lockSwipes();
+
+    mySwiper.on('onSlideChangeEnd', function() {
+    	if (mySwiper.activeIndex == 0) {
+    		mySwiper.lockSwipes();
+    	}
+    })
+
+    $('.start-bt').tap(function() {
+    	mySwiper.unlockSwipes();
+    	mySwiper.slideNext(null, 500);
+    })
 
 });
