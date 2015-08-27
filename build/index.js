@@ -1,0 +1,1 @@
+$(function(){var n=new Swiper(".swiper-container",{direction:"vertical"});n.lockSwipes(),n.on("onSlideChangeEnd",function(){0==n.activeIndex&&n.lockSwipes()}),$(".start-bt").tap(function(){n.unlockSwipes(),n.slideNext(null,500)})});

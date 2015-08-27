@@ -1,3 +1,8 @@
+//require('./css/swiper.min.css');
+require('./../css/index.css');
+require('./../css/swiper.min.css');
+require('./zepto-full.js');
+require('./swiper.min.js');
 $(function() {
 	var mySwiper = new Swiper ('.swiper-container', {
       // Optional parameters

@@ -1176,12 +1176,12 @@ div.line {
 
 @keyframes power-move {
     0%   {transform: translate3d(0, 110px, 0); opacity: 0}
-    100% {transform: none; opacity: 1}
+    100% {transform: translate3d(0, 0, 0); opacity: 1}
 }
 
 @-webkit-keyframes power-move {
     0%   {-webkit-transform: translate3d(0, 110px, 0); opacity: 0}
-    100% {-webkit-transform: none; opacity: 1}
+    100% {-webkit-transform: translate3d(0, 0, 0); opacity: 1}
 }
 
 .download-bt {
